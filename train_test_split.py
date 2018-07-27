@@ -22,12 +22,12 @@ def get_training_and_testing_sets(file_list):
     testing = file_list[split_index:]
     return training, testing
 
+
 def create_folders(trainig, testing):
     for file in trainig:
-        # print(file)
         copyfile(path + file, path + 'train/' + file)
 
-    for file in test:
+    for file in testing:
         copyfile(path + file, path + 'test/' + file)
 
 
